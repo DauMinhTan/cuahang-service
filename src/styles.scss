@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  display: flex;
+  margin: 0;
+  height: 0;
+}
+app-root{
+  width: 390px;
+  display: flex;
+  height: 0;
+}
+html {
+  width: 1000px;
+  height: 700px;
+  display: flex;
+
+
+}
+app-footer{
+  margin-r: 1px;
+  margin: 0;
+  width: 1000px;
+}
+app-navbar{
+  height: 0px;
+}
+.column{
+  display: flex;
+  justify-content: flex-start;
+}

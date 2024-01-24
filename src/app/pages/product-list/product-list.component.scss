@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+h1 {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 4px 20px;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.items {
+  display: block;
+  margin: 100px;
+}
+.item {
+  background-color: #fff;
+  margin-left:  10px;
+  width: 205px;
+  padding: 10px;
+  height: 290px;
+  float: left;
+  margin-bottom: 50px;
+}
+
+.item img {
+  display: block;
+  margin: auto;
+}
+h2 {
+  font-size: 16px;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  padding: 0 0 5px 0;
+}
+button {
+  border: 1px solid #722A1B;
+  padding: 4px 14px;
+  background-color: #fff;
+  color: #722A1B;
+  text-transform: uppercase;
+  float: right;
+  margin: 5px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.add-to-cart{
+  border-radius: 10px;
+  margin-right: 20px;
+}
+button.add-to-cart:hover{
+  background-color: #722A1B;
+  color: #ffffff;
+}
+button.remove:hover{
+  background-color: #722A1B;
+  color: #ffffff;
+}
+button.update{
+  border-radius: 10px;
+  margin-right: 10px;
+}
+button.update:hover{
+  background-color: #722A1B;
+  color: #ffffff;
+}
+button.remove{
+  border-radius: 10px;
+  margin-left: 10px;
+}
+span {
+  float: right;
+}
+.shopping-cart {
+  display: inline-block;
+  background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px 0 0;
+}
+.uplist input{
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+
+}
+.linklist input{
+  width: 300px;
+  margin-left: 5px;
+}
+.mainlist {
+  margin-top: 100px;
+  margin-left: 400px;
+  width: 450px;
+  height: 400px;
+}
+.mainlist .clicklist button{
+  width: 130px;
+  margin-top: 35px;
+  margin-right: 60px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+.wrapper .icon {
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  display: flex;
+}
+.mainlist .uplist{
+  margin-left: 5px;
+}
