@@ -4,14 +4,15 @@ background-color: #fff;
   display: flex;
   flex-direction: row;
  height: 36px;
-  width: 325%;
-  position: relative;
+  width: 100%;
 justify-content: space-between;
   align-items: center;
 }
 .menu .menulogo{
   margin-left: 60px;
   font-size: 30px;
+
+
 }
 .menu .menuInNavbar{
   display: flex;
@@ -26,41 +27,48 @@ justify-content: space-between;
 .wrapperInNavbar{
   display: flex;
   flex-direction: row;
-  width: 325%;
+  width: 100%;
   height: 60px;
   justify-content: space-around;
   background-color: #f5f5f5;
-  position: relative;
   align-items: center;
+
 }
 .wrapperInNavbar .logo  {
   display: flex;
   font-size: 30px;
+  cursor: pointer;
+  margin-right: 180px;
 }
 .wrapperInNavbar .mainInNavbar{
   display: flex;
-  font-size: 20px;
+  font-size: 15px;
 
 }
 .wrapperInNavbar .mainInNavbar a{
   margin-left: 15px;
+  cursor: pointer;
+  font-weight: 500 ;
 }
 .wrapperInNavbar .icon {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
-.find .search{
+.find .search {
   margin-top: 8px;
   color: #cccccc;
   flex-direction: row;
   display: flex;
-  position: relative;
-
+  justify-content: start;
+margin-top: 10px;
+  margin-left: 10px;
 }
 .search p{
-  margin-top: 0;
+  margin-top: -3px;
   display: flex;
  justify-items: center;
+  margin-left: 10px;
 }
 .find{
   border-radius: 50px;
@@ -74,10 +82,28 @@ margin-left: 10px;
   font-size: 25px;
 
 }
+.logo{
+  color: black;
+}
+.logo:hover{
+  color: grey;
+
+}
 .cart{
-  margin-left: 10px;
+  margin-left: 30px;
 margin-top: 4px;
-  font-size: 25px;
+  font-size: 20px;
+}
+.cart:hover{
+  color: grey;
+}
+.cart01{
+  margin-left:40px;
+  margin-top: 4px;
+  font-size: 20px;
+}
+.cart01:hover{
+  color: grey;
 }
 
 
@@ -87,7 +113,7 @@ margin-top: 4px;
   //gap: 0.5em;
   justify-content: center;
   align-items: center;
-  width: 325%;
+  width: 100%;
 }
 button {
   margin-top: 20px;
@@ -115,7 +141,7 @@ button:hover{
   background-color: black;
   color: white;
   height: 300px;
-   width: 325%;
+   width: 100%;
 font-size: 10px;
 }
 .column01{
@@ -169,197 +195,33 @@ padding: 10px;
   font-size: 12px;
 }
 .image{
-  width: 325px;
-  height: 600px;
+  width: 100%;
+  height: 400px;
 }
 .image img{
-  width: 1263px;
-  height: 600px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 .new b{
   font-size: 15px;
   display: flex;
 justify-content: center;
-  width: 325%;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .favorite b{
   font-size: 50px;
   display: flex;
   justify-content: center;
-  width: 325%;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+
 }
-.locked{
+.locked {
   justify-content: center;
-  width: 325%;
+  width: 100%;
   display: flex;
-}
-.trend{
-  margin-left: 20px;
-  margin-top: 30px;
-  font-size: 23px;
-}
-.product{
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 325px;
-}
-.product1 img{
-  width: 300px;
-  height: 250px;
-  margin-top: 10px;
-  margin-left: 20px;
-
-}
-.product2 img{
-  width: 300px;
-  height: 250px;
-  margin-top: 10px;
-  margin-left: 10px;
-
-}
-.product3 img{
-  width: 300px;
-  height: 250px;
-  margin-top: 10px;
-  margin-left: 10px;
-
-}
-.product4 img{
-  width: 300px;
-  height: 250px;
-  margin-top: 10px;
-  margin-left: 10px;
-
-}
-.arrow{
-  display: flex;
-  flex-direction: row;
-  width: 325px;
-
-}
-.arrowBack{
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  margin-top: 5px;
-  margin-right: 1px;
-}
-.arrowBack span{
-  display: flex;
-  justify-content: center;
-  margin-left: 6px;
-  margin-top: 8.5px;
-
-}
-.arrowNext{
-  margin-left: 1px;
-  border-radius: 50px;
-  width: 40px;
-  height: 40px;
-  margin-top: 5px;
-}
-.arrowNext span{
-  display: flex;
-  justify-content: center;
-}
-.trending{
-  display: flex;
-  flex-direction: column;
-  width: 325px;
-}
-.columnOnWhite{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: white;
-  height: 300px;
-  width: 325%;
-  font-size: 18px;
-}
-.columnOnWhite01{
-  display: flex;
-  flex-direction: column;
-}
-.columnOnWhite01 span {
-  padding: 10px;
-  font-size: 18px;
-}
-.columnOnWhite01 a{
-  padding: 10px;
-  color: grey;
-}
-
-.columnOnWhite02{
-  display: flex;
-  flex-direction: column;
-}
-.columnOnWhite02 span{
-  padding: 10px;
-  font-size: 18px;
-
-}
-.columnOnWhite02 a{
-  padding: 10px;
-  color: grey;
-
-}
-.columnOnWhite03{
-  display: flex;
-  flex-direction: column;
-}
-.columnOnWhite03 a{
-  padding: 10px;
-  color: grey;
-
-}
-.columnOnWhite03 span{
-  padding: 10px;
-  font-size: 18px;
-
-}
-.columnOnWhite04{
-  display: flex;
-  flex-direction: column;
-}
-.columnOnWhite04 a{
-  padding: 10px;
-  color: grey;
-
-}
-.columnOnWhite04 span{
-  padding: 10px;
-  font-size: 18px;
-}
-.total{
-  display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-
-}
-.price{
-  margin-top: 5px;
-}
-.sex{
-  color: grey;
-}
-.name{
-margin-bottom: -10px;
-}
-.total02{
-margin-left: 13px;
-}
-.total02 .sex{
-  margin-top: 11px;
-}
-.end {
-  margin-top: 10px;
-  width: 300px;
-  border-style: solid;
-  border-radius: 50px;
-  color: grey;
-  margin-left: 10px;
+  color: #262626;
 }

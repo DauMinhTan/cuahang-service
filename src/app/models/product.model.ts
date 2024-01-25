@@ -1,6 +1,6 @@
-export interface item{
+export interface Item{
   name: string;
-  id: number;
+  id: string;
   description: string;
   price: number;
   quality: number;

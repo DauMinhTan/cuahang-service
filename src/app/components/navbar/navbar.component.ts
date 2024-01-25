@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ChangeDetectionStrategy } from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -6,7 +6,9 @@ import {Router} from "@angular/router";
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class NavbarComponent {
   constructor (private router:Router) {}
@@ -15,11 +17,17 @@ export class NavbarComponent {
     this.router.navigate(['/productList']).then()
   }
 
- addToCart(){
-    this.router.navigate(['/addToCart']).then()
+ goToCart(){
+    this.router.navigate(['/cart']).then()
  }
   goToDetails()
   {
     this.router.navigate(['/productDetails']).then()
   }
+  goToAdmin()
+  {
+    this.router.navigate(['/admin']).then()
+  }
+
+
 }

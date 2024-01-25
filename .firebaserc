@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shopsuahang": {
+      "hosting": {
+        "cuahang-service": [
+          "shopsuahang"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shopsuahang"
+  }
+}

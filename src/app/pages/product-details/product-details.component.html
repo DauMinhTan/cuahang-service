@@ -1,1 +1,17 @@
-<p>product-details works!</p>
+<div class="mainDetails">
+  <div class="cardDetails" >
+<div class="card-img">
+    <img class="card-imgDetails"
+         src="{{itemDetail?.image}}"
+         alt="Card image cap">
+</div>
+    <div class="card-b">
+      <p class="card-t">Name: {{itemDetail?.name}}</p>
+      <p class="card-t">Price: {{itemDetail?.price}}</p>
+      <p class="card-t">Description: {{itemDetail?.description}}</p>
+      <p class="card-t">Quality: {{itemDetail?.quality}}</p>
+      <p class="card-t">Stock: {{itemDetail?.stock}}</p>
+<!--      <button (click)="addProductToCart(item)">ADD</button>-->
+    </div>
+  </div>
+</div>

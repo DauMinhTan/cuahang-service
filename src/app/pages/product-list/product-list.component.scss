@@ -1,124 +1,74 @@
-* {
-  margin: 0;
-  padding: 0;
+.main{
+  display: flex;
+  justify-content: space-between;
+
+}
+.main .PickUp{
+  display: flex;
+  flex-direction: column;
+}
+.PickUp b{
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
 
-.wrapper {
-  width: 100%;
+.card {
+  margin-bottom: 20px;
 }
-h1 {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  font-size: 20px;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 4px 20px;
-  float: left;
-}
-.clear {
-  clear: both;
-}
-.items {
-  display: block;
-  margin: 100px;
-}
-.item {
-  background-color: #fff;
-  margin-left:  10px;
-  width: 205px;
-  padding: 10px;
-  height: 290px;
-  float: left;
-  margin-bottom: 50px;
-}
-
-.item img {
-  display: block;
-  margin: auto;
-}
-h2 {
-  font-size: 16px;
-  display: block;
-  border-bottom: 1px solid #ccc;
-  margin: 0 0 10px 0;
-  padding: 0 0 5px 0;
-}
-button {
-  border: 1px solid #722A1B;
-  padding: 4px 14px;
-  background-color: #fff;
-  color: #722A1B;
-  text-transform: uppercase;
-  float: right;
-  margin: 5px 0;
-  font-weight: bold;
+//.card.
+.card-img-top {
+  width: 300px;
+  height: 300px;
+  align-self: center;
   cursor: pointer;
 }
-
-button.add-to-cart{
-  border-radius: 10px;
-  margin-right: 20px;
-}
-button.add-to-cart:hover{
-  background-color: #722A1B;
-  color: #ffffff;
-}
-button.remove:hover{
-  background-color: #722A1B;
-  color: #ffffff;
-}
-button.update{
-  border-radius: 10px;
-  margin-right: 10px;
-}
-button.update:hover{
-  background-color: #722A1B;
-  color: #ffffff;
-}
-button.remove{
-  border-radius: 10px;
-  margin-left: 10px;
-}
-span {
-  float: right;
-}
-.shopping-cart {
-  display: inline-block;
-  background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px 0 0;
-}
-.uplist input{
-  padding: 10px;
-  margin-top: 10px;
-  margin-left: 5px;
-
-}
-.linklist input{
-  width: 300px;
-  margin-left: 5px;
-}
-.mainlist {
-  margin-top: 100px;
-  margin-left: 400px;
-  width: 450px;
-  height: 400px;
-}
-.mainlist .clicklist button{
-  width: 130px;
-  margin-top: 35px;
-  margin-right: 60px;
-  height: 50px;
-  margin-bottom: 15px;
-}
-.wrapper .icon {
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
+.col{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.mainlist .uplist{
-  margin-left: 5px;
+.card-block{
+  font-size: 20px;
+
 }
+.card-block p{
+  display: flex;
+  margin-bottom: 1px;
+  margin: 10px;
+}
+.card-block p.card-title{
+  color: #262626;
+  cursor: pointer;
+}
+.card-text{
+  color: chocolate;
+  cursor: pointer;
+}
+.card-block span{
+  color: grey;
+  cursor: pointer;
+}
+.card{
+
+}
+//.show-cart li {
+//  display: flex;
+//}
+.gifts{
+  display: flex;
+  font-size: 15px;
+  margin-left: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+  align-items: center;
+}
+.finded{
+  display: flex;
+  justify-content: space-between;
+font-size: 15px;
+  width: 200px;
+  flex-direction: row;
+  margin-right: 80px;
+}
+

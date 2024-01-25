@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../service/product.service";
-import {item} from "../../models/product.model";
+import {Item} from "../../models/product.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-list',
@@ -10,10 +11,13 @@ import {item} from "../../models/product.model";
   styleUrl: './product-list.component.scss'
 })
 export class ProductListComponent implements OnInit{
-  productList :item[]=[]
-  constructor(private listProduct: ProductService) {}
+  constructor(public productservice: ProductService, private router: Router) {}
   ngOnInit() {
-   this.productList = this.listProduct.itemlist;
   }
 
+  addToDetail(item: Item)
+  {
+    this.productservice.addToDetail(item)
+      this.router.navigate(['/productDetails']).then()
+  }
 }

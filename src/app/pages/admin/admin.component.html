@@ -1,0 +1,99 @@
+<form [formGroup]="form" >
+  <div class="upnavbar">
+    <div>
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="enter name"
+           formControlName="name"/>
+    </div>
+    <div> <label>price:  </label>
+      <input type="number" id="price" placeholder="enter price"
+             formControlName="price"/>
+    </div>
+    <div>
+    <label>description:  </label>
+
+    <input type="text" id="description" placeholder="enter description"
+           formControlName="description"/>
+    </div>
+    <div><label>quality:  </label>
+
+      <input type="number" id="quality" placeholder="enter stock"
+             formControlName="stock"/>
+    </div>
+    <div class="linknavbar" >
+      <label>link:</label>
+      <input type="text" id="image" placeholder="enter image"
+             formControlName="image"/>
+    </div>
+    <div class="clicknavbar0">
+      <div class="clicknavbar">
+        <button type="submit" (click)="submit()"><b>Submit</b></button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="productList">
+  <div class="col">
+    @for (item of this.productService.listItem;track item.id){
+
+      <div class="card" >
+        <div class="card-block">
+          <p class="cardName">{{item.name}}</p>
+          <p class="cardPrice">{{item.price}}</p>
+          <p class="cardDes">{{item.description}}</p>
+          <p class="cardQuality">{{item.quality}}</p>
+<!--          <p class="card-title">Stock:{{item.stock}}</p>-->
+
+        </div>
+        <img class="card-img-top"
+             src="{{item.image}}"
+             alt="Card image cap">
+        <div class="upAndDe">
+          <div class="Update" (click)="openCartDialog(item)"><i class="fa-solid fa-pen-to-square"></i></div>
+
+          <div class="delete" (click)="deleteProduct(item)"><i class="fa-solid fa-trash"></i></div>
+        </div>
+
+
+      </div>
+    }
+  </div>
+</div>
+<dialog #dialogUpdate class="updateToList">
+  <form [formGroup]="updateForm" >
+    <div class="upnavbar01">
+      <div class="name">
+      <label>Name:  </label>
+      <input type="text"   placeholder="enter name"
+             formControlName="name"/>
+      </div>
+      <div> <label>price:  </label>
+        <input type="number"  placeholder="enter price"
+               formControlName="price"/>
+      </div>
+      <div>
+
+      <label>description:  </label>
+
+      <input type="text"  placeholder="enter description"
+             formControlName="description"/>
+      </div>
+
+      <div><label>quality:  </label>
+
+        <input type="number"  placeholder="enter stock"
+               formControlName="stock"/>
+      </div>
+      <div class="linknavbar" >
+        <label>link:</label>
+        <input type="text" placeholder="enter image"
+               formControlName="image"/>
+      </div>
+        <div class="click">
+          <button  (click)="updateSubmit()"><b>Sumbit</b></button>
+          <button (click)="closeCartDialog()"><b>Closed</b></button>
+        </div>
+    </div>
+  </form>
+</dialog>
