@@ -6,12 +6,48 @@
          alt="Card image cap">
 </div>
     <div class="card-b">
-      <p class="card-t">Name: {{itemDetail?.name}}</p>
-      <p class="card-t">Price: {{itemDetail?.price}}</p>
-      <p class="card-t">Description: {{itemDetail?.description}}</p>
-      <p class="card-t">Quality: {{itemDetail?.quality}}</p>
-      <p class="card-t">Stock: {{itemDetail?.stock}}</p>
+      <div class="a">
+      <span class="viewer"><i class="fa-regular fa-eye"></i> 2,351 viewed in the last 7 days</span>
+      <a class="cardText"> Sustainable Materials</a>
+      </div>
+      <p class="card-t"><b> {{itemDetail?.name}}</b></p>
+<!--      <p class="cardText"> {{itemDetail?.price}}</p>-->
+      <p class="card-favo"> {{itemDetail?.description}}</p>
+<!--      <p class="card-t">{{itemDetail?.quality}}</p>-->
+      <p class="card-t">${{itemDetail?.stock}} <span>Sale off 39%</span></p>
 <!--      <button (click)="addProductToCart(item)">ADD</button>-->
+      <div class="change">
+        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/a93045f0-a70e-4a6a-82df-ead00e15fe6b/wio-10-womens-road-running-shoes-TVcjsT.png">
+        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/6c4dd6f9-bd98-4cb5-a702-1178a2827005/wio-10-womens-road-running-shoes-TVcjsT.png">
+        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/681efac5-be18-4a0a-9e14-ba650a798730/wio-10-womens-road-running-shoes-TVcjsT.png">
+        <img src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto/a621a7f3-7d00-4db3-acdf-eac0ddcde77b/wio-10-womens-road-running-shoes-TVcjsT.png">
+      </div>
+      <div class="cartSize">
+        <b>Select Size</b>
+        <p>Size Guide</p>
+      </div>
+      <div class="row1">
+        <button> 5</button>
+        <button> 5.5</button>
+        <button> 6</button>
+        <button> 6.5</button>
+        <button> 7</button>
+      </div>
+      <div class="row2">
+        <button> 7.5</button>
+        <button> 8</button>
+        <button> 8.5</button>
+        <button> 9</button>
+        <button> 9.5</button>
+      </div>
+      <div class="row3">
+        <button> 10</button>
+        <button> 11.5</button>
+        <button> 12</button>
+        <button> 12.5</button>
+        <button> 13</button>
+      </div>
     </div>
-  </div>
+
+</div>
 </div>
