@@ -1,5 +1,7 @@
 import { Component,ChangeDetectionStrategy } from '@angular/core';
 import {Router} from "@angular/router";
+import {AuthService} from "../../service/auth.service";
+import {ProductService} from "../../service/product.service";
 
 @Component({
   selector: 'app-navbar',
@@ -11,23 +13,28 @@ import {Router} from "@angular/router";
 
 })
 export class NavbarComponent {
-  constructor (private router:Router) {}
+  constructor (private router:Router, private authService: AuthService, private productService: ProductService) {}
   goToList()
   {
-    this.router.navigate(['/productList']).then()
+    this.router.navigate(['/base/productlist']).then()
   }
 
  goToCart(){
-    this.router.navigate(['/cart']).then()
+    this.router.navigate(['/base/addtocart']).then()
  }
   goToDetails()
   {
-    this.router.navigate(['/productDetails']).then()
+    this.router.navigate(['/base/productDetails']).then()
   }
   goToAdmin()
   {
-    this.router.navigate(['/admin']).then()
+    this.router.navigate(['/base/admin']).then()
   }
+  signOut(){
+  this.authService.singout();
+  this.router.navigate(["/login"])
+}
+
 
 
 }

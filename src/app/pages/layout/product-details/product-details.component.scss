@@ -8,17 +8,21 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    //justify-content: space-evenly;
+    justify-content: space-evenly;
+    padding: 0 50px;
+
+
     //align-items: center;
 
     .card-img{
-      width: 35%;
-      height: 90%;
+      width: 500px;
+      height: 500px;
 
       .card-imgDetails{
+        border-radius: 10px;
         width: 100%;
         height: 100%;
-        margin-left: 250px;
+
       }
     }
   }
@@ -28,7 +32,7 @@
   }
 }
 .card-b{
-  margin-left: 300px;
+
 }
 .cardText{
   color: chocolate;
@@ -94,6 +98,7 @@
   background-color: white;
   border: grey solid 1px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .card-b .row3{
    display: flex;
@@ -108,9 +113,100 @@
   background-color: white;
   border: grey solid 1px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .row1 button:hover{
   background-color: #f5f5f5;
   border: black solid 1px;
   cursor: pointer;
+}
+.Learn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.interest{
+  margin-bottom: 5px;
+}
+.More{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.interest b{
+  display: flex;
+
+}
+.interest .Home{
+color: chocolate;
+  display: flex;
+}
+.goToCart{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.addToBag{
+  margin-bottom: 10px;
+  margin-top: 20px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: grey solid 1px;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+.heart{
+  height: 50px;
+  border-radius: 50px;
+  border: grey solid 1px;
+background-color: white;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+.Home{
+  color: #3e3e3e;
+}
+.addToBag:hover{
+  background-color: grey;
+
+}
+.heart:hover{
+  border: black solid 2px;
+
+}
+.shipping {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  height: 150px;
+  justify-content: center;
+}
+.shipping .na{
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+
+}
+.na b{
+  margin-bottom: 10px;
+}
+.me p{
+  margin-bottom: 0px;
+  font-size: 15px;
+}
+.na span{
+  font-size: 15px;
+}
+.me a{
+  color: #262626;
+  font-size: 15px;
+}
+.available{
+  color: grey;
+  font-size: 14px;
 }

@@ -1,0 +1,195 @@
+<div class="gifts">
+  <b> Valentine's Day Gifts (345)</b>
+  <div class="finded">
+    <p>Hide Filters <i class="fa-solid fa-list"></i></p>
+    <p>Sort By <i class="fa-solid fa-angle-down"></i></p>
+  </div>
+</div>
+<div class="main">
+<div class="PickUp">
+  <b>Shoes</b>
+  <b>Hoodies & Pullovers</b>
+  <b>Jackets & Vests</b>
+  <b>Pants & Tights</b>
+  <b>Shorts</b>
+  <b>Tights & Leggings</b>
+  <b>Sports Bras</b>
+  <div class="jordan">
+  <b>Jordan</b>
+  </div>
+    <b>Lifestyle</b>
+  <div class="NikeByou"><b>Nike By You</b></div>
+  <div class="gender">
+    <b>Gender</b>
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+  <div class="choose">
+
+  <div class="a">
+    <button></button>
+    <p>Men</p>
+  </div>
+  <div class="a">
+    <button></button>
+    <p>Women</p>
+  </div>
+  <div class="Unisex">
+    <button></button>
+    <p >Unisex</p>
+  </div>
+  </div>
+
+  <div class="kids">
+    <b>Kids</b>
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+
+  <div class="choose">
+
+    <div class="a">
+      <button></button>
+      <p>Boys</p>
+    </div>
+    <div class="a">
+      <div class="g">
+      <button></button>
+      <p>Girls</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="shopbyprice">
+    <b>Shop By Price</b>
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+
+  <div class="choose">
+
+    <div class="a">
+      <button></button>
+      <p>$25 - $50</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>$50 - $100</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>$100 - $150</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>$150 - $300</p>
+    </div>
+    <div class="a">
+      <div class="g">
+        <button></button>
+        <p>Over $300</p>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div class="color">
+      <b>Color</b>
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
+<div class="choosecolor">
+  <div class="a">
+    <div class="b">
+    <button style="background-color: white"></button>
+    <p>White</p>
+    </div>
+    <div class="b">
+    <button style="background-color: saddlebrown"></button>
+    <p>Brown</p>
+    </div>
+    <div class="b">
+    <button style="background-color: black"></button>
+    <p>Black</p>
+    </div>
+  </div>
+</div>
+  <div class="Brand">
+      <b>Brand</b>
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
+
+  <div class="choose">
+    <div class="a">
+      <button></button>
+      <p>Nike Sportswear</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>Jordan</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>Nike By you</p>
+    </div>
+    <div class="a">
+      <button></button>
+      <p>ACG</p>
+    </div>
+    <div class="a">
+      <div class="g">
+        <p>+ More</p>
+      </div>
+    </div>
+  </div>
+  <div class="Width">
+    <b>Width</b>
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+
+  <div class="choose">
+
+    <div class="a">
+      <div class="g">
+        <button></button>
+        <p>Regular</p>
+      </div>
+    </div>
+  </div>
+  <div class="material">
+    <b>Material</b>
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+  <div class="choose">
+    <div class="a">
+      <button></button>
+      <p>Nike Sportswear</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div class="productList">
+<div class="col">
+  @for (item of this.productservice.listItem;track item.id){
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" (click)="addToDetail(item)"
+           src="{{item.image}}"
+           alt="Card image cap">
+      <div class="card-block">
+        <p class="card-title"><b>Name: {{item.name}}</b></p>
+        <p class="card-text">Price:  ${{item.price}}</p>
+        <p class="card-title"><span>Description: {{item.description}}</span></p>
+        <p class="card-title"><span>Quanity: {{item.quality}}</span></p>
+        <p class="card-title"><span>Stock: {{item.stock}}</span></p>
+      </div>
+    </div>
+  }
+</div>
+</div>
+</div>

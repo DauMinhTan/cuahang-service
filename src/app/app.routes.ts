@@ -1,31 +1,20 @@
 import { Routes } from '@angular/router';
-import {ProductDetailsComponent} from "./pages/product-details/product-details.component";
-import {ProductListComponent} from "./pages/product-list/product-list.component";
-import {AddToCartComponent} from "./pages/add-to-cart/add-to-cart.component";
-import {AdminComponent} from "./pages/admin/admin.component";
+import {LoginComponent} from "./pages/login/login.component";
 
 
 export const routes: Routes = [
   {
-    path: 'productDetails',
-    component: ProductDetailsComponent,
+    path: "login",
+   component: LoginComponent
   },
   {
-    path: 'productList',
-    component: ProductListComponent,
-
+    path: "base",
+    loadChildren: () => import('./pages/layout/layout.routes').then(m => m.routes),
   },
   {
-    path: 'cart',
-    component: AddToCartComponent,
-  },
-  {
-    path: 'admin',
-    component: AdminComponent,
-  },
-  {
-    path: '**',
-    component: ProductListComponent,
+    path:"**",
+    component:LoginComponent
   }
+
 ];
 

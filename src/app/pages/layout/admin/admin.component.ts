@@ -1,8 +1,7 @@
 import {ChangeDetectorRef, Component, ElementRef, inject, ViewChild} from '@angular/core';
-import {Item} from "../../models/product.model";
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {ProductService} from "../../service/product.service";
-import {update} from "@angular/fire/database";
+import {ProductService} from "../../../service/product.service";
+import {Item} from "../../../models/product.model";
 
 @Component({
   selector: 'app-admin',

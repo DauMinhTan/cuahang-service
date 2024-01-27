@@ -39,11 +39,11 @@
 
       <div class="card" >
         <div class="card-block">
-          <p class="cardName">{{item.name}}</p>
+          <p style="width: 200px; display: flex; justify-content: start" class="cardName">{{item.name}}</p>
           <p class="cardPrice">{{item.price}}</p>
           <p class="cardDes">{{item.description}}</p>
           <p class="cardQuality">{{item.quality}}</p>
-<!--          <p class="card-title">Stock:{{item.stock}}</p>-->
+          <p class="card-title">{{item.stock}}</p>
 
         </div>
         <img class="card-img-top"
@@ -54,11 +54,28 @@
 
           <div class="delete" (click)="deleteProduct(item)"><i class="fa-solid fa-trash"></i></div>
         </div>
-
-
       </div>
     }
   </div>
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <th>Name</th>-->
+<!--      <th>Description</th>-->
+<!--      <th>Quantity</th>-->
+<!--      <th>stock</th>-->
+<!--      <th>image</th>-->
+<!--    </tr>-->
+<!--    @for (item of this.productService.listItem;track item.id){-->
+<!--    <tr>-->
+<!--      <td>{{item.name}}</td>-->
+<!--      <td>{{item.description}}</td>-->
+<!--      <td>{{item.quality}}</td>-->
+<!--      <td>{{item.stock}}</td>-->
+<!--      -->
+<!--      <td><img src="{{item.image}}"></td>-->
+<!--    </tr>-->
+<!--    }-->
+<!--    </table>-->
 </div>
 <dialog #dialogUpdate class="updateToList">
   <form [formGroup]="updateForm" >
@@ -91,8 +108,8 @@
                formControlName="image"/>
       </div>
         <div class="click">
-          <button  (click)="updateSubmit()"><b>Sumbit</b></button>
-          <button (click)="closeCartDialog()"><b>Closed</b></button>
+          <button  (click)="updateSubmit()"><b>Summbit</b></button>
+          <button (click)="closeCartDialog()"><b>Close</b></button>
         </div>
     </div>
   </form>
