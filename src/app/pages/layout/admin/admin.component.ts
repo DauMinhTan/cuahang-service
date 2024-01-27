@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ElementRef, inject, ViewChild} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, EventEmitter, inject, Output, ViewChild} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {ProductService} from "../../../service/product.service";
 import {Item} from "../../../models/product.model";
@@ -29,7 +29,23 @@ export class AdminComponent {
     this.cartCdr.detectChanges();
 
   }
-constructor(public productService: ProductService) {
+
+  @ViewChild('filldialog', { static: true })
+  dialog!: ElementRef<HTMLDialogElement>;
+  Cdr = inject(ChangeDetectorRef);
+  openDialog() {
+    Animation;
+    this.dialog.nativeElement.showModal();
+    this.Cdr.detectChanges();
+  }
+
+  closeDialog() {
+    this.cartDialog.nativeElement.close();
+    this.Cdr.detectChanges();
+
+  }
+
+  constructor(public productService: ProductService) {
 }
 
 
@@ -54,6 +70,9 @@ constructor(public productService: ProductService) {
       quality : this.form.value.quality || 0,
     }
     this.addItem(newForm)
+    this.closeDialog()
+
+
   }
   addItem(item:Item){
     this.productService.add(item)
@@ -87,4 +106,5 @@ constructor(public productService: ProductService) {
     this.closeCartDialog()
     console.log(newUpdateForm)
   }
+
 }

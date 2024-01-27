@@ -10,39 +10,45 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
   align-items: center;
-  margin-right: 50px;
+  //margin-right: 300px;
 
 
 }
 .cardQuality{
-  margin-right: 80px;
+  margin-right: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .cardName{
-  margin-right: 110px;
+  //margin-right: 9 0px;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100px;
 }
 .cardDes{
-  margin-right: 150px;
+  //margin-right: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .cardPrice{
-  margin-right: 150px;
+  //margin-right: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.card-title{
+  display: flex;
+  width: 100px;
+  justify-content: flex-start;
 }
 .card-img-top {
   width: 100px;
   height: 100px;
   align-self: center;
   margin-right: 70px;
+
 }
 .col{
   display: flex;
@@ -98,9 +104,16 @@
   background-color: grey;
 }
 .updateToList{
-  width: 300px;
-  height: 300px ;
-  border-radius: 5px;
+  width: 350px;
+  height: 400px ;
+  border-radius: 20px;
+  border: grey solid 1.5px;
+}
+.filldialog{
+  width: 350px;
+  height: 400px ;
+  border-radius: 20px;
+  border: grey solid 1.5px;
 }
 .upnavbar01 {
   display: flex;
@@ -123,4 +136,152 @@ margin-top: 10px;
   height: 40px;
   cursor: pointer;
 }
+.upnavbar01 .name{
+  display: flex;
+  flex-direction: column;
+}
+.upnavbar01   .name input{
+  border-radius: 10px;
+  border: grey solid 1px;
+  width: 180px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.upnavbar01 .name input:hover{
+  background-color: white;
+}
+.upnavbar01 .name label{
+  margin-bottom: 5px;
+}
+.upnavbar01 .price{
+  display: flex;
+  flex-direction: column;
+}
+.upnavbar01   .price input{
+  border-radius: 10px;
+  border: grey solid 1px;
+  width: 60px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.upnavbar01 .price input:hover{
+  background-color: white;
+}
+.upnavbar01 .price label{
+  margin-bottom: 5px;
+}
+.upnavbar01 .nameandprice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0px;
+}
+
+.upnavbar01 .description{
+  display: flex;
+  //margin-top: 10px;
+  flex-direction: column;
+  //margin-left: 27px;
+}
+.upnavbar01   .description input{
+  border-radius: 10px;
+  border: white solid 1px;
+  width: 180px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+}
+.upnavbar01 .description input:hover{
+  background-color: white;
+}
+.upnavbar01 .description label{
+  margin-bottom: 5px;
+}
+.upnavbar01 .quality{
+  display: flex;
+  flex-direction: column;
+}
+.upnavbar01  .quality input{
+  border-radius: 10px;
+  border: grey solid 1px;
+  width: 60px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.upnavbar01 .quality input:hover{
+  background-color: white;
+}
+.upnavbar01 .quality label{
+  margin-bottom: 5px;
+}
+.upnavbar01 .desandqua{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0px;
+}
+.fill{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.upnavbar01 .linknavbar{
+  display: flex;
+  flex-direction: column;
+  margin-left: 33px;
+}
+.upnavbar01   .linknavbar input{
+  border-radius: 10px;
+  border: grey solid 1px;
+  width: 280px;
+  height: 30px;
+  background-color: #d9d9d9;
+}
+.upnavbar01 .linknavbar input:hover{
+  background-color: white;
+}
+.upnavbar01 .linknavbar label{
+  margin-bottom: 5px;
+}
+.infomation{
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  border-bottom: grey solid 1px;
+  height: 50px;
+}
+.infomation .namecol{
+  margin-left: 111px;
+}
+.infomation .descriptcol{
+  margin-left: 100px;
+}
+.infomation .pricecol{
+  width: 200px;
+  margin-left: 165px;
+  display: flex;
+  justify-content: center;
+}
+.infomation .quantitycol{
+  margin-left: 182px;
+
+}
+//.infomation .stockcol{
+//  margin-left: 130px;
+//}
+.infomation .imagecol{
+  margin-left: 125px;
+}
+.infomation .pluscol{
+  margin-left: 126px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: #cccccc solid 1px;
+  height: 30px;
+}
+
 

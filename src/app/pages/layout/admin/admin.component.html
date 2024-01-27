@@ -1,49 +1,67 @@
+<dialog #filldialog class="filldialog">
 <form [formGroup]="form" >
-  <div class="upnavbar">
-    <div>
-    <label>Name:</label>
-    <input type="text" id="name" placeholder="enter name"
-           formControlName="name"/>
-    </div>
-    <div> <label>price:  </label>
-      <input type="number" id="price" placeholder="enter price"
-             formControlName="price"/>
-    </div>
-    <div>
-    <label>description:  </label>
 
-    <input type="text" id="description" placeholder="enter description"
-           formControlName="description"/>
+  <div class="fill"><b> Fill Infomation </b></div>
+  <div class="upnavbar01">
+    <div class="nameandprice">
+      <div class="name">
+        <label>Name:  </label>
+        <input type="text"   placeholder="enter name"
+               formControlName="name"/>
+      </div>
+      <div class="price"> <label>Price:  </label>
+        <input type="number"  placeholder="enter price"
+               formControlName="price"/>
+      </div>
     </div>
-    <div><label>quality:  </label>
+    <div class="desandqua">
+      <div class="description">
 
-      <input type="number" id="quality" placeholder="enter stock"
-             formControlName="stock"/>
+        <label>Description:  </label>
+
+        <input type="text"  placeholder="enter description"
+               formControlName="description"/>
+      </div>
+
+      <div class="quality"><label >quanity:  </label>
+
+        <input type="number"  placeholder="enter stock"
+               formControlName="stock"/>
+      </div>
     </div>
     <div class="linknavbar" >
-      <label>link:</label>
-      <input type="text" id="image" placeholder="enter image"
+      <label>link-Image:</label>
+      <input type="text" placeholder="enter image"
              formControlName="image"/>
     </div>
-    <div class="clicknavbar0">
-      <div class="clicknavbar">
-        <button type="submit" (click)="submit()"><b>Submit</b></button>
-      </div>
+    <div class="click">
+      <button type="submit" (click)="submit()"><b>Submit</b></button>
+      <button type="close" (click)="closeDialog()"><b>close</b></button>
     </div>
   </div>
 </form>
-
+</dialog>
 <div class="productList">
   <div class="col">
+    <div class="infomation">
+      <div class="namecol"><b> Name</b></div>
+      <div class="pricecol"><b> Price</b></div>
+      <div class="descriptcol"><b> Description</b></div>
+      <div class="quantitycol"><b> Quantity</b></div>
+
+<!--      <div class="stockcol"> Stock</div>-->
+      <div class="imagecol"><b> Image</b></div>
+<button (click)="openDialog()" class="pluscol"><b><i class="fa-solid fa-plus"></i></b></button>
+    </div>
     @for (item of this.productService.listItem;track item.id){
 
       <div class="card" >
         <div class="card-block">
-          <p style="width: 200px; display: flex; justify-content: start" class="cardName">{{item.name}}</p>
+          <p style="width: 100px; display: flex; justify-content: start" class="cardName">{{item.name}}</p>
           <p class="cardPrice">{{item.price}}</p>
           <p class="cardDes">{{item.description}}</p>
           <p class="cardQuality">{{item.quality}}</p>
-          <p class="card-title">{{item.stock}}</p>
+<!--          <p class="card-title">{{item.stock}}</p>-->
 
         </div>
         <img class="card-img-top"
@@ -57,53 +75,40 @@
       </div>
     }
   </div>
-<!--  <table>-->
-<!--    <tr>-->
-<!--      <th>Name</th>-->
-<!--      <th>Description</th>-->
-<!--      <th>Quantity</th>-->
-<!--      <th>stock</th>-->
-<!--      <th>image</th>-->
-<!--    </tr>-->
-<!--    @for (item of this.productService.listItem;track item.id){-->
-<!--    <tr>-->
-<!--      <td>{{item.name}}</td>-->
-<!--      <td>{{item.description}}</td>-->
-<!--      <td>{{item.quality}}</td>-->
-<!--      <td>{{item.stock}}</td>-->
-<!--      -->
-<!--      <td><img src="{{item.image}}"></td>-->
-<!--    </tr>-->
-<!--    }-->
-<!--    </table>-->
+
 </div>
 <dialog #dialogUpdate class="updateToList">
   <form [formGroup]="updateForm" >
+    <div class="fill"><b> Fill Infomation </b></div>
     <div class="upnavbar01">
+      <div class="nameandprice">
       <div class="name">
       <label>Name:  </label>
       <input type="text"   placeholder="enter name"
              formControlName="name"/>
       </div>
-      <div> <label>price:  </label>
+      <div class="price"> <label>Price:  </label>
         <input type="number"  placeholder="enter price"
                formControlName="price"/>
       </div>
-      <div>
+      </div>
+      <div class="desandqua">
+      <div class="description">
 
-      <label>description:  </label>
+      <label>Description:  </label>
 
       <input type="text"  placeholder="enter description"
              formControlName="description"/>
       </div>
 
-      <div><label>quality:  </label>
+      <div class="quality"><label >quanity:  </label>
 
         <input type="number"  placeholder="enter stock"
                formControlName="stock"/>
       </div>
+      </div>
       <div class="linknavbar" >
-        <label>link:</label>
+        <label>link-Image:</label>
         <input type="text" placeholder="enter image"
                formControlName="image"/>
       </div>
