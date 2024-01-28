@@ -1,0 +1,196 @@
+.col{
+  //margin-left: 200px;
+  margin-top: 50px;
+}
+.col .card .card-img-top{
+  height: 200px;
+  width: 200px;
+
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-evenly;
+  justify-content: center;
+  margin-top: 20px;
+}
+.summary{
+  margin-bottom: 20px;
+  display: flex;
+  font-size: 25px;
+}
+.code{
+font-size: 15px;
+}
+.codeandi{
+  display: flex;
+  flex-direction: row;
+}
+.rightcode {
+  margin-left: 70px;
+  font-size: 20px;
+}
+.total{
+  margin-left: 170px;
+}
+.Subtotal{
+  margin-top: 10px;
+
+}
+ .sumary{
+  display: flex;
+  //justify-content: center;
+  flex-direction: column;
+   width: 30%;
+   //position: fixed;
+}
+.minusandplus{
+  display: flex;
+flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+.cardandsumary{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  width: 70% ;
+  justify-content: flex-end;
+}
+.card-block{
+  margin-left: 10px;
+  width: 30%;
+  justify-content: flex-start;
+}
+.Paypal{
+  display: flex;
+  flex-direction: row;
+}
+.Subtotal{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 200px;
+}
+.napri{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-img{
+width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.estandmoney{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.money{
+  margin-left: 55px;
+}
+.est{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: black solid 0.5px ;
+  height: 40px;
+  width: 72%;
+}
+.minusest{
+  margin-left: 180px;
+}
+.totalest{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  border-bottom: black solid 0.5px ;
+  height: 30px;
+  width: 72%;
+
+}
+.sum{
+  margin-left: 190px;
+}
+.checkout{
+  width: 275px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50px;
+  margin-top: 20px;
+  color: white;
+  cursor: pointer;
+}
+.checkout b{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
+.checkout:hover{
+  background-color: grey;
+}
+.Paypal{
+  width: 275px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.Paypal b{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
+.Pay{
+  margin-left: 120px;
+  color: #00009d;
+}
+.Pal{
+  color: lightskyblue;
+}
+.Paypal:hover{
+  background-color: white;
+  border: grey solid 1px;
+}
+.members{
+  display: flex;
+  //margin-left: 22.5%;
+  color: red;
+  font-size: 20px;
+  margin-left: 10px;
+
+}
+.become{
+  display: flex;
+  //margin-left: 22.5%;
+  color: grey;
+  //font-size: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.memandbe{
+  border: #3e3e3e solid 1px;
+margin-left: 22.5%;
+  width: 38%;
+  border-radius: 5px;
+}
+.bag{
+  margin-left: 22.5%;
+font-size: 30px;
+  margin-top: 12px;
+}
+.card-desadd{
+  margin: 0px;
+  color: grey;
+}
+

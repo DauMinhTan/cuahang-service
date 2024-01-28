@@ -2,18 +2,39 @@ import {ChangeDetectorRef, Component, ElementRef, EventEmitter, inject, Output, 
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {ProductService} from "../../../service/product.service";
 import {Item} from "../../../models/product.model";
+import {SharedModule} from "../../../../shared/shared.module";
+import {TuiInputModule} from "@taiga-ui/kit";
 
 @Component({
   selector: 'app-admin',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
+    TuiInputModule,
   ],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.scss'
 })
 
 export class AdminComponent {
+  exampleForm = new FormGroup({
+    exampleControl: new FormControl(''),
+  });
+
+  open = false;
+  openUpdate = false;
+
+  showDialog(): void {
+    this.open = true;
+
+  }
+  showDialogUpdate(item: Item){
+    this.updateForm.patchValue(item)
+    this.openUpdate = true;
+    console.log('open')
+  }
+
   @ViewChild('dialogUpdate', { static: true })
   cartDialog!: ElementRef<HTMLDialogElement>;
   cartCdr = inject(ChangeDetectorRef);
@@ -30,6 +51,7 @@ export class AdminComponent {
 
   }
 
+
   @ViewChild('filldialog', { static: true })
   dialog!: ElementRef<HTMLDialogElement>;
   Cdr = inject(ChangeDetectorRef);
@@ -40,7 +62,7 @@ export class AdminComponent {
   }
 
   closeDialog() {
-    this.cartDialog.nativeElement.close();
+    this.dialog.nativeElement.close();
     this.Cdr.detectChanges();
 
   }
@@ -55,7 +77,7 @@ export class AdminComponent {
     name: new FormControl(''),
     description: new FormControl(''),
     price: new  FormControl(0),
-    quality: new  FormControl(0),
+    quality: new  FormControl(1),
     image: new  FormControl(''),
   });
   submit(){
@@ -67,11 +89,10 @@ export class AdminComponent {
       description : this.form.value.description || '',
       price : this.form.value.price  || 0,
       image : this.form.value.image || '',
-      quality : this.form.value.quality || 0,
+      quality : this.form.value.quality || 1,
     }
     this.addItem(newForm)
-    this.closeDialog()
-
+    // this.open=false
 
   }
   addItem(item:Item){
@@ -88,7 +109,7 @@ export class AdminComponent {
     name: new FormControl(''),
     description: new FormControl(''),
     price: new  FormControl(0),
-    quality: new  FormControl(0),
+    quality: new  FormControl(1),
     image: new  FormControl(''),
   });
   updateSubmit(){
@@ -100,7 +121,7 @@ export class AdminComponent {
       description : this.updateForm.value.description || '',
       price : this.updateForm.value.price  || 0,
       image : this.updateForm.value.image || '',
-      quality : this.updateForm.value.quality || 0,
+      quality : this.updateForm.value.quality || 1,
     }
     this.productService.updateItem(newUpdateForm)
     this.closeCartDialog()

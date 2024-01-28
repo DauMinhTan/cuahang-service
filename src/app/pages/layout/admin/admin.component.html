@@ -1,121 +1,273 @@
-<dialog #filldialog class="filldialog">
-<form [formGroup]="form" >
+<!--<dialog #filldialog class="filldialog">-->
+<!--<form [formGroup]="form" >-->
+<!--  <div class="clickclose" type="close" (click)="closeDialog()"><b><i class="fa-solid fa-xmark"></i></b></div>-->
+<!--  <div class="fillproduct"><b> Fill New Froduct </b></div>-->
+<!--  <div class="upnavbar01">-->
+<!--    <div class="nameandprice">-->
+<!--      <div class="name">-->
+<!--        <label>Name:  </label>-->
+<!--        <input type="text"   placeholder="Enter name"-->
+<!--               formControlName="name"/>-->
+<!--      </div>-->
+<!--      <div class="price"> <label>Price:  </label>-->
+<!--        <input type="number"  placeholder="Enter price"-->
+<!--               formControlName="price"/>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="desandqua">-->
+<!--      <div class="description">-->
 
-  <div class="fill"><b> Fill Infomation </b></div>
-  <div class="upnavbar01">
-    <div class="nameandprice">
-      <div class="name">
-        <label>Name:  </label>
-        <input type="text"   placeholder="enter name"
-               formControlName="name"/>
-      </div>
-      <div class="price"> <label>Price:  </label>
-        <input type="number"  placeholder="enter price"
-               formControlName="price"/>
-      </div>
+<!--        <label>Description:  </label>-->
+
+<!--        <input type="text"  placeholder="Enter description"-->
+<!--               formControlName="description"/>-->
+<!--      </div>-->
+
+<!--      <div class="quality"><label >quanity:  </label>-->
+
+<!--        <input type="number"  placeholder="Enter stock"-->
+<!--               formControlName="stock"/>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="linknavbar" >-->
+<!--      <label>link-Image:</label>-->
+<!--      <input type="text" placeholder="Enter image"-->
+<!--             formControlName="image"/>-->
+<!--    </div>-->
+<!--    <div class="click">-->
+<!--      <button type="submit" (click)="submit()"><b>Submit</b></button>-->
+<!--      <button type="close" (click)="closeDialog()"><b>close</b></button>&ndash-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</form>-->
+<!--</dialog>-->
+
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{label: 'Fill Infomation', size: 's'}"
+  [(tuiDialog)]="open"
+>
+  <div class="allform">
+  <form
+    [formGroup]="form"
+    (ngSubmit)="observer.complete()"
+  >
+    <p>This abstracts away service and subscription</p>
+    <div class="formadd">
+    <tui-input
+      formControlName="name"
+      tuiAutoFocus
+    >
+      Enter name
+    </tui-input>
     </div>
-    <div class="desandqua">
-      <div class="description">
-
-        <label>Description:  </label>
-
-        <input type="text"  placeholder="enter description"
-               formControlName="description"/>
-      </div>
-
-      <div class="quality"><label >quanity:  </label>
-
-        <input type="number"  placeholder="enter stock"
-               formControlName="stock"/>
-      </div>
+    <div class="formadd">
+    <tui-input
+      formControlName="price"
+      tuiAutoFocus
+    >
+      Enter price
+    </tui-input>
     </div>
-    <div class="linknavbar" >
-      <label>link-Image:</label>
-      <input type="text" placeholder="enter image"
-             formControlName="image"/>
+    <div class="formadd">
+    <tui-input
+      formControlName="description"
+      tuiAutoFocus
+    >
+      Enter description
+    </tui-input>
     </div>
-    <div class="click">
-      <button type="submit" (click)="submit()"><b>Submit</b></button>
-      <button type="close" (click)="closeDialog()"><b>close</b></button>
+    <div class="formadd">
+    <tui-input
+      formControlName="stock"
+      tuiAutoFocus
+    >
+      Enter stock
+    </tui-input>
     </div>
+    <div class="formadd">
+    <tui-input
+        formControlName="image"
+      tuiAutoFocus
+    >
+      Enter link-image
+    </tui-input>
+    </div>
+    <p>
+      <button
+        tuiButton
+        type="submit"
+        (click)="submit()"
+      >
+        Submit
+      </button>
+    </p>
+  </form>
   </div>
-</form>
-</dialog>
+</ng-template>
+
 <div class="productList">
   <div class="col">
     <div class="infomation">
       <div class="namecol"><b> Name</b></div>
       <div class="pricecol"><b> Price</b></div>
       <div class="descriptcol"><b> Description</b></div>
-      <div class="quantitycol"><b> Quantity</b></div>
+<!--      <div class="quantitycol"><b> Quantity</b></div>-->
 
-<!--      <div class="stockcol"> Stock</div>-->
+      <div class="quantitycol"><b> Stock </b></div>
       <div class="imagecol"><b> Image</b></div>
-<button (click)="openDialog()" class="pluscol"><b><i class="fa-solid fa-plus"></i></b></button>
+<!--<button class="pluscol"  (click)="showDialog()"><b><i class="fa-solid fa-plus"></i></b></button>-->
+      <button class="pluscol"
+              icon="tuiIconPlus"
+        tuiIconButton
+        type="button"
+
+        [disabled]="false"
+        (click)="showDialog()">
+      </button>
     </div>
     @for (item of this.productService.listItem;track item.id){
-
       <div class="card" >
         <div class="card-block">
           <p style="width: 100px; display: flex; justify-content: start" class="cardName">{{item.name}}</p>
           <p class="cardPrice">{{item.price}}</p>
           <p class="cardDes">{{item.description}}</p>
-          <p class="cardQuality">{{item.quality}}</p>
-<!--          <p class="card-title">{{item.stock}}</p>-->
+<!--          <p class="cardQuality">{{item.quality}}</p>-->
+          <p class="cardQuality">{{item.stock}}</p>
 
         </div>
         <img class="card-img-top"
              src="{{item.image}}"
              alt="Card image cap">
         <div class="upAndDe">
-          <div class="Update" (click)="openCartDialog(item)"><i class="fa-solid fa-pen-to-square"></i></div>
-
-          <div class="delete" (click)="deleteProduct(item)"><i class="fa-solid fa-trash"></i></div>
+<!--          <div class="Update" (click)="showDialogUpdate(item)"><i class="fa-solid fa-pen-to-square"></i></div>-->
+          <button
+            icon="tuiIconEdit"
+            tuiIconButton
+            type="button"
+            class="update"
+            [disabled]="false"
+            (click)="showDialogUpdate(item)">
+          </button>
+<!--          <div class="delete" (click)="deleteProduct(item)"><i class="fa-solid fa-trash"></i></div>-->
+          <button
+            icon="tuiIconTrash2"
+            tuiIconButton
+            type="button"
+            class="delete"
+            [disabled]="false"
+            (click)="deleteProduct(item)">
+          </button>
         </div>
       </div>
     }
   </div>
 
 </div>
-<dialog #dialogUpdate class="updateToList">
-  <form [formGroup]="updateForm" >
-    <div class="fill"><b> Fill Infomation </b></div>
-    <div class="upnavbar01">
-      <div class="nameandprice">
-      <div class="name">
-      <label>Name:  </label>
-      <input type="text"   placeholder="enter name"
-             formControlName="name"/>
-      </div>
-      <div class="price"> <label>Price:  </label>
-        <input type="number"  placeholder="enter price"
-               formControlName="price"/>
-      </div>
-      </div>
-      <div class="desandqua">
-      <div class="description">
+<!--<dialog #dialogUpdate class="updateToList">-->
+<!--  <form [formGroup]="updateForm" >-->
+<!--    <div class="clickclose" type="close" (click)="closeCartDialog()"><b><i class="fa-solid fa-xmark"></i></b></div>-->
+<!--    <div class="fill"><b> Fill Infomation </b></div>-->
+<!--    <div class="upnavbar01">-->
+<!--      <div class="nameandprice">-->
+<!--      <div class="name">-->
+<!--      <label>Name:  </label>-->
+<!--      <input type="text"   placeholder="enter name"-->
+<!--             formControlName="name"/>-->
+<!--      </div>-->
+<!--      <div class="price"> <label>Price:  </label>-->
+<!--        <input type="number"  placeholder="enter price"-->
+<!--               formControlName="price"/>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--      <div class="desandqua">-->
+<!--      <div class="description">-->
 
-      <label>Description:  </label>
+<!--      <label>Description:  </label>-->
 
-      <input type="text"  placeholder="enter description"
-             formControlName="description"/>
-      </div>
+<!--      <input type="text"  placeholder="enter description"-->
+<!--             formControlName="description"/>-->
+<!--      </div>-->
 
-      <div class="quality"><label >quanity:  </label>
+<!--      <div class="quality"><label >quanity:  </label>-->
 
-        <input type="number"  placeholder="enter stock"
-               formControlName="stock"/>
-      </div>
-      </div>
-      <div class="linknavbar" >
-        <label>link-Image:</label>
-        <input type="text" placeholder="enter image"
-               formControlName="image"/>
-      </div>
-        <div class="click">
-          <button  (click)="updateSubmit()"><b>Summbit</b></button>
-          <button (click)="closeCartDialog()"><b>Close</b></button>
+<!--        <input type="number"  placeholder="enter stock"-->
+<!--               formControlName="stock"/>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--      <div class="linknavbar" >-->
+<!--        <label>link-Image:</label>-->
+<!--        <input type="text" placeholder="enter image"-->
+<!--               formControlName="image"/>-->
+<!--      </div>-->
+<!--        <div class="click">-->
+<!--          <button  (click)="updateSubmit()"><b>Summbit</b></button>-->
+<!--&lt;!&ndash;          <button (click)="closeCartDialog()"><b>Close</b></button>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+<!--  </form>-->
+<!--</dialog>-->
+
+  <ng-template
+    let-observer
+    [tuiDialogOptions]="{label: 'Fill Infomation', size: 's'}"
+    [(tuiDialog)]="openUpdate"
+  >
+    <div class="allform">
+      <form
+        [formGroup]="updateForm"
+        (ngSubmit)="observer.complete()"
+      >
+        <p>This abstracts away service and subscription</p>
+        <div class="formadd">
+          <tui-input
+            formControlName="name"
+            tuiAutoFocus
+          >
+            Enter name
+          </tui-input>
         </div>
+        <div class="formadd">
+          <tui-input
+            formControlName="price"
+            tuiAutoFocus
+          >
+            Enter price
+          </tui-input>
+        </div>
+        <div class="formadd">
+          <tui-input
+            formControlName="description"
+            tuiAutoFocus
+          >
+            Enter description
+          </tui-input>
+        </div>
+        <div class="formadd">
+          <tui-input
+            formControlName="stock"
+            tuiAutoFocus
+          >
+            Enter stock
+          </tui-input>
+        </div>
+        <div class="formadd">
+          <tui-input
+            formControlName="image"
+            tuiAutoFocus
+          >
+            Enter link-image
+          </tui-input>
+        </div>
+        <p>
+          <button
+            tuiButton
+            type="submit"
+            (click)="updateSubmit()"
+          >
+            Submit
+          </button>
+        </p>
+      </form>
     </div>
-  </form>
-</dialog>
+  </ng-template>

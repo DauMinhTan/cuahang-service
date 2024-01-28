@@ -73,23 +73,33 @@
   font-size: 15px;
   margin-right: 50px;
 }
-.Update:hover{
-  color: grey;
-
-}
-.delete:hover{
-  color: grey;
-}
-.Update{
+//.update:hover{
+//  color: grey;
+//
+//
+//}
+//.delete:hover{
+//  color: grey;
+//}
+.update{
   margin-top: 20px;
   cursor: pointer;
   margin-left: 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  border: #cccccc solid 1px;
+  height: 30px;
+//background-color: red;
 }
 .delete{
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: 30px;
   cursor: pointer;
-
+  border-radius: 50px;
+  //border: #cccccc solid 1px;
+  height: 10px;
+  width: 30px;
+background-color: white;
 }
 .clicknavbar button{
   margin-right: 20px;
@@ -132,13 +142,18 @@
 margin-top: 10px;
 }
 .click button{
-  width: 80px;
-  height: 40px;
+  width: 120px;
+  height: 50px;
   cursor: pointer;
+  border-radius: 20px;
+}
+.click button:hover{
+  background-color: #b3d6ef;
 }
 .upnavbar01 .name{
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
 }
 .upnavbar01   .name input{
   border-radius: 10px;
@@ -156,6 +171,8 @@ margin-top: 10px;
 .upnavbar01 .price{
   display: flex;
   flex-direction: column;
+  margin-top: 15px;
+
 }
 .upnavbar01   .price input{
   border-radius: 10px;
@@ -175,6 +192,7 @@ margin-top: 10px;
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0px;
+  border-top: grey solid 1px;
 }
 
 .upnavbar01 .description{
@@ -226,8 +244,8 @@ margin-top: 10px;
   display: flex;
   justify-content: center;
   font-size: 30px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  //margin-top: 30px;
 }
 .upnavbar01 .linknavbar{
   display: flex;
@@ -253,35 +271,58 @@ margin-top: 10px;
   margin-top: 80px;
   border-bottom: grey solid 1px;
   height: 50px;
+  align-items: center;
+
 }
 .infomation .namecol{
   margin-left: 111px;
 }
+
 .infomation .descriptcol{
   margin-left: 100px;
 }
 .infomation .pricecol{
   width: 200px;
-  margin-left: 165px;
+  margin-left: 160px;
   display: flex;
   justify-content: center;
 }
 .infomation .quantitycol{
-  margin-left: 182px;
+  margin-left: 190px;
 
 }
 //.infomation .stockcol{
 //  margin-left: 130px;
 //}
 .infomation .imagecol{
-  margin-left: 125px;
+  margin-left: 135px;
 }
 .infomation .pluscol{
-  margin-left: 126px;
+  margin-left: 90px;
   font-size: 20px;
   border-radius: 50px;
   border: #cccccc solid 1px;
   height: 30px;
+  cursor: pointer;
+}
+.fillproduct{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.clickclose{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+  cursor: pointer;
+}
+.clickclose .b i{
+  font-size: 25px;
+}
+
+.formadd{
+  margin-top: 15px;
 }
 
 

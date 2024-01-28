@@ -1,18 +1,63 @@
 <div class="col">
+  <div class="memandbe">
+  <div class="members"><b>Members get free shipping on orders $50+</b></div>
+  <div class="become">Become a Nike Member for fast free shipping on orders $50+ <span>Join us</span> or <span>Sigh-in</span></div>
+  </div>
+  <div class="bag"><b>Bag</b></div>
+    <div class="cardandsumary">
+    <div class="product">
   @for(item of this.productService.listItemInCart; track  item.id){
 <div class="card">
+  <div class="card-img">
   <img class="card-img-top"
        src="{{item.image}}"
        alt="Card image cap">
+  </div>
   <div class="card-block">
-    <p class="card-title"><b>Name: {{item.name}}</b></p>
-    <p class="card-text">Price:  ${{item.price}}</p>
-    <p class="card-title"><span>Description: {{item.description}}</span></p>
+    <div class="napri">
+    <p class="card-title"><b>{{item.name}}</b></p>
+    <p class="card-text"><b>  ${{item.price}}</b></p>
+    </div>
+    <p class="card-desadd"><b> {{item.description}}</b></p>
+    <div class="minusandplus">
+      <div class="minus" (click)="misus(item)"><i class="fa-solid fa-minus"></i></div>
     <p class="card-title"><span>Quantity: {{item.quality}}</span></p>
-    <p class="card-title"><span>Stock: {{item.stock}}</span></p>
+      <div class="plus" (click)="plus(item)"><i class="fa-solid fa-plus"></i></div>
+    </div>
+  </div>
+<!--    <p class="card-title"><span>Stock: {{item.stock}}</span></p>-->
+  </div>
+  }
+    </div>
+  <div class="sumary">
+    <div class="summary"><b>Summary</b></div>
+    <div class="codeandi">
+    <div class="code"><b>Do you have a Promo Code</b></div>
+      <div class="rightcode"><i class="fa-solid fa-angle-down"></i></div>
+  </div>
+    <div class="Subtotal">
+      <div class="sub"><b>Subtotal</b></div>
+      <div class="total"><b>${{totalBill()}}.00</b></div>
+    </div>
+    <div class="estandmoney">
+    <div class="estimated"><b>Estimated Shipping & Handling</b></div>
+    <div class="money">$0.00</div>
+    </div>
+    <div class="est">
+      <div class="estimated"><b>Estimated Tax</b></div>
+      <div class="minusest"><i class="fa-solid fa-minus"></i></div>
+    </div>
+    <div class="totalest">
+      <div class="totalproduct"><b>Total</b></div>
+      <div class="sum"><b>${{totalBill()}}.00</b></div>
+
+    </div>
+    <div class="checkout"><b>Checkout</b></div>
+    <div class="Paypal">
+      <div class="Pay"><b>Pay</b></div>
+      <div class="Pal"><b>Pal</b></div>
+    </div>
+  </div>
   </div>
 </div>
-  }
-
-  <p>total: {{totalBill()}}</p>
-</div>
+  <!--  <div (click)="deleteItemCart">-->

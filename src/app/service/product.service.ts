@@ -55,6 +55,28 @@ detailItem: Item | undefined
     }
   }
 
+  async deleteItemToCart(newItem: Item) {
+    const docRef = doc(this.fproduct, 'listcart', newItem.id.toString());
+
+    try {
+      // Kiểm tra xem tài liệu đã tồn tại trong giỏ hàng chưa
+      const docSnapshot = await getDoc(docRef);
+
+      if (docSnapshot.exists()) {
+        // Nếu tồn tại, tăng quantity lên 1
+        const currentQuantity = parseInt(docSnapshot.data()['quality'] || 0);
+        await setDoc(docRef, { ...newItem, quality: currentQuantity -1 });
+      } else {
+        // Nếu chưa tồn tại, thêm vào giỏ hàng
+        await setDoc(docRef, newItem);
+      }
+
+      console.log("Đã thêm sản phẩm vào giỏ hàng thành công!");
+    } catch (error) {
+      console.error("Lỗi khi thêm sản phẩm vào giỏ hàng:", error);
+    }
+  }
+
   addToDetail(item: Item)
   {
     this.detailItem = item
@@ -69,5 +91,18 @@ detailItem: Item | undefined
   return product || {};
   }
 
+  async updateStock(item: Item){
+  const docRef = doc(this.fproduct,'listproduct',item.id.toString())
+    const docSnap = await getDoc(docRef)
+    if (docSnap.exists()){
+      const oldItem = docSnap.data() as Item
+      oldItem.stock = oldItem.stock - oldItem.quality
+      await setDoc(docRef,oldItem)
+    }
+  }
+
+  async deleteItemCart(item:Item){
+    await deleteDoc(doc(this.fproduct,'listcart' ,item.id.toString()))
+  }
 }
 
