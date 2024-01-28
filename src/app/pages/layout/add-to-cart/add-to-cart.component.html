@@ -63,7 +63,7 @@
       <div class="sum"><b>${{totalBill()}}.00</b></div>
 
     </div>
-    <div class="checkout"><b>Checkout</b></div>
+    <div class="checkout"  (click)="showDialog()"><b>Checkout</b></div>
     <div class="Paypal">
       <div class="Pay"><b>Pay</b></div>
       <div class="Pal"><b>Pal</b></div>
@@ -71,3 +71,66 @@
   </div>
   </div>
 </div>
+
+
+<ng-template
+  #template
+  let-observer
+  [tuiDialogOptions]="{label: 'Your  Bill', size: 's'}"
+  [(tuiDialog)]="showDialogBill"
+>
+  @for (item of this.productService.listItemInCart;track item.id)
+  {
+    <div class="cardbuy">
+      <div class="card-imgbuy">
+        <img class="card-img-top"
+             src="{{item.image}}"
+             alt="Card image cap">
+<!--        <div class="shipping-img">Shipping</div>-->
+<!--        <div class="arrives">Arrives by Fri, Feb 2 <b>Edit Location</b></div>-->
+      </div>
+      <div class="card-blockbuy">
+        <div class="napribuy">
+          <p class="card-title"><b>{{item.name}}</b></p>
+          <p class="card-textbuy"><b>  ${{item.price}}</b></p>
+        </div>
+        <p class="card-desaddbuy"><b> {{item.description}}</b></p>
+<!--        <div class="minusandplus">-->
+<!--          <div class="minus" (click)="misus(item)"><i class="fa-solid fa-minus"></i></div>-->
+          <p class="card-titlebuy"><span>Quantity: {{item.quality}}</span></p>
+<!--          <div class="plus" (click)="plus(item)"><i class="fa-solid fa-plus"></i></div>-->
+<!--        </div>-->
+<!--        <div class="size">Size: M 13 /W 14.5</div>-->
+<!--        <div class="heartanddeleteandshare">-->
+<!--          <div class="heartanddelete">-->
+<!--            <div class="remove" (click)="deleteItemCart(item)"><i class="fa-regular fa-trash-can"></i></div>-->
+<!--            <div class="heart"><i class="fa-regular fa-heart"></i></div>-->
+<!--            <div class="commenticon"><i class="fa-regular fa-comments"></i></div>-->
+<!--          </div>-->
+<!--          <div class="share"><i class="fa-regular fa-share-from-square"></i></div>-->
+<!--        </div>-->
+      </div>
+    </div>
+  }
+  <div class="totalbuy"><b>Total: ${{totalBill()}}.00</b></div>
+  <div class="buyandcancel">
+  <button
+    size="m"
+    tuiButton
+    type="button"
+    class="cancel"
+    (click)="observer.complete()"
+  >
+    Cancel
+  </button>
+  <button
+    size="m"
+    tuiButton
+    type="button"
+    class="buy"
+    (click)="buy()"
+  >
+    Buy
+  </button>
+  </div>
+</ng-template>

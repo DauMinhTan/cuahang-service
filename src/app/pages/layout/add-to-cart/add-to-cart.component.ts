@@ -2,18 +2,27 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {ProductService} from "../../../service/product.service";
 import {Item} from "../../../models/product.model";
+import {TuiButtonModule} from "@taiga-ui/core";
+import {SharedModule} from "../../../../shared/shared.module";
+
 @Component({
   selector: 'app-add-to-cart',
   standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
+    imports: [
+        ReactiveFormsModule,
+        TuiButtonModule,
+      SharedModule
+    ],
   templateUrl: './add-to-cart.component.html',
   styleUrl: './add-to-cart.component.scss',
 })
 export class AddToCartComponent implements OnInit{
   constructor(public productService: ProductService) {}
 
+  showDialogBill = false;
+  showDialog(){
+    this.showDialogBill = true
+  }
   totalBill(){
     let total = 0
     for (let i = 0; i< this.productService.listItemInCart.length; i++){
@@ -45,5 +54,10 @@ export class AddToCartComponent implements OnInit{
   }
   deleteItemCart(item: Item){
     this.productService.deleteItemCart(item)
+  }
+  buy(){
+    alert(' Ban đã mua hàng thành công')
+    this.productService.listItemInCart = []
+    this.showDialogBill = false
   }
 }

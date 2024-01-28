@@ -209,12 +209,13 @@ margin-left: 200px;
 }
 .memandbe{
   border: #3e3e3e solid 1px;
-margin-left: 22.5%;
+margin-left: 23.4%;
   width: 38%;
   border-radius: 5px;
+
 }
 .bag{
-  margin-left: 22.5%;
+  margin-left: 23.4%;
 font-size: 30px;
   margin-top: 15px;
   margin-bottom: 10px;
@@ -259,4 +260,62 @@ font-size: 20px;
 }
 .heart:hover{
   color: red;
+}
+.card-imgbuy{
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  //margin-left: 200px;
+  width: 100px;
+  height: 100px;
+}
+.cardbuy{
+  display: flex;
+  flex-direction: row;
+  border-bottom: grey solid 0.5px;
+  margin-top: 10px;
+  width: 365px;
+}
+.napribuy{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+  height: 25px;
+}
+//.card-textbuy{
+//  margin-left: 40px;
+//}
+.card-desaddbuy{
+  color: grey;
+  font-size: 10px;
+}
+.card-blockbuy{
+  margin-left: 15px;
+}
+.card-titlebuy{
+  height: 25px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.buy{
+  margin-top: 20px;
+}
+.cancel{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.totalbuy{
+  display: flex;
+  justify-content: flex-end;
+  width: 365px;
+  margin-top: 10px;
+}
+.buyandcancel{
+  display: flex;
+  width: 375px;
+  margin-left: -10px;
+  flex-direction: row;
+  justify-content: space-between;
 }
