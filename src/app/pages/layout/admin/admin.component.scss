@@ -298,13 +298,21 @@ margin-top: 10px;
   margin-left: 135px;
 }
 .infomation .pluscol{
-  margin-left: 90px;
+  margin-left: 300px;
   font-size: 20px;
   border-radius: 50px;
-  border: #cccccc solid 1px;
+  //border: #cccccc solid 1px;
   height: 30px;
   cursor: pointer;
 }
+.appandimg{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 328px;
+}
+
 .fillproduct{
   display: flex;
   justify-content: center;
@@ -323,6 +331,9 @@ margin-top: 10px;
 
 .formadd{
   margin-top: 15px;
+}
+.buttonfill{
+  margin-left: 100px;
 }
 
 

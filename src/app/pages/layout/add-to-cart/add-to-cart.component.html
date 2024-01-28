@@ -12,8 +12,10 @@
   <img class="card-img-top"
        src="{{item.image}}"
        alt="Card image cap">
+    <div class="shipping-img">Shipping</div>
+  <div class="arrives">Arrives by Fri, Feb 2 <b>Edit Location</b></div>
   </div>
-  <div class="card-block">
+    <div class="card-block">
     <div class="napri">
     <p class="card-title"><b>{{item.name}}</b></p>
     <p class="card-text"><b>  ${{item.price}}</b></p>
@@ -24,7 +26,16 @@
     <p class="card-title"><span>Quantity: {{item.quality}}</span></p>
       <div class="plus" (click)="plus(item)"><i class="fa-solid fa-plus"></i></div>
     </div>
-  </div>
+    <div class="size">Size: M 13 /W 14.5</div>
+      <div class="heartanddeleteandshare">
+      <div class="heartanddelete">
+      <div class="remove" (click)="deleteItemCart(item)"><i class="fa-regular fa-trash-can"></i></div>
+      <div class="heart"><i class="fa-regular fa-heart"></i></div>
+        <div class="commenticon"><i class="fa-regular fa-comments"></i></div>
+      </div>
+        <div class="share"><i class="fa-regular fa-share-from-square"></i></div>
+    </div>
+</div>
 <!--    <p class="card-title"><span>Stock: {{item.stock}}</span></p>-->
   </div>
   }
@@ -60,4 +71,3 @@
   </div>
   </div>
 </div>
-  <!--  <div (click)="deleteItemCart">-->

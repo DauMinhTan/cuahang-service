@@ -5,7 +5,12 @@
 .col .card .card-img-top{
   height: 200px;
   width: 200px;
+  margin-top: 20px;
 
+}
+.size{
+  font-size: 15px;
+  color: grey;
 }
 .card{
   display: flex;
@@ -13,11 +18,16 @@
   //justify-content: space-evenly;
   justify-content: center;
   margin-top: 20px;
+  //border-bottom: black solid 0.5px;
+  height: 250px;
 }
 .summary{
   margin-bottom: 20px;
   display: flex;
   font-size: 25px;
+}
+.arrives{
+  margin-bottom: 20px;
 }
 .code{
 font-size: 15px;
@@ -47,9 +57,17 @@ font-size: 15px;
 .minusandplus{
   display: flex;
 flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
+  color: grey;
+}
+.minusandplus span{
+  margin-left: 10px;
+  font-size: 15px;
+}
+.minusandplus .plus{
+  margin-left: 10px;
 }
 .cardandsumary{
   display: flex;
@@ -64,9 +82,10 @@ flex-direction: row;
   justify-content: flex-end;
 }
 .card-block{
-  margin-left: 10px;
+  //margin-left: 20px;
   width: 30%;
   justify-content: flex-start;
+  border-bottom: grey solid 0.5px;
 }
 .Paypal{
   display: flex;
@@ -82,12 +101,22 @@ flex-direction: row;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 20px;
+
+}
+.card-desadd{
+  font-size: 15px;
 }
 .card-img{
-width: 40%;
+width: 25%;
   display: flex;
   justify-content: flex-end;
+  flex-direction: column;
+margin-left: 200px;
+  border-bottom: grey solid 0.5px;
+
 }
+
 .estandmoney{
   margin-top: 10px;
   display: flex;
@@ -187,10 +216,47 @@ margin-left: 22.5%;
 .bag{
   margin-left: 22.5%;
 font-size: 30px;
-  margin-top: 12px;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 .card-desadd{
   margin: 0px;
   color: grey;
 }
-
+.heartanddeleteandshare{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+font-size: 20px;
+  justify-content: space-between;
+}
+.heartanddelete{
+  display: flex;
+  flex-direction: row;
+}
+.heart {
+  margin-left: 20px;
+  cursor: pointer;
+}
+.commenticon{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.share{
+  cursor: pointer;
+}
+.remove{
+  cursor: pointer;
+}
+.commenticon:hover{
+  color: grey;
+}
+.remove:hover{
+  color: grey;
+}
+.share:hover{
+  color: grey;
+}
+.heart:hover{
+  color: red;
+}

@@ -95,6 +95,7 @@
     </div>
     <p>
       <button
+        class="buttonfill"
         tuiButton
         type="submit"
         (click)="submit()"
@@ -115,9 +116,10 @@
 <!--      <div class="quantitycol"><b> Quantity</b></div>-->
 
       <div class="quantitycol"><b> Stock </b></div>
+      <div class="appandimg">
       <div class="imagecol"><b> Image</b></div>
 <!--<button class="pluscol"  (click)="showDialog()"><b><i class="fa-solid fa-plus"></i></b></button>-->
-      <button class="pluscol"
+      <button appearance="pluscol"
               icon="tuiIconPlus"
         tuiIconButton
         type="button"
@@ -125,6 +127,7 @@
         [disabled]="false"
         (click)="showDialog()">
       </button>
+    </div>
     </div>
     @for (item of this.productService.listItem;track item.id){
       <div class="card" >
@@ -145,7 +148,7 @@
             icon="tuiIconEdit"
             tuiIconButton
             type="button"
-            class="update"
+            appearance="update"
             [disabled]="false"
             (click)="showDialogUpdate(item)">
           </button>
@@ -154,7 +157,7 @@
             icon="tuiIconTrash2"
             tuiIconButton
             type="button"
-            class="delete"
+            appearance="delete"
             [disabled]="false"
             (click)="deleteProduct(item)">
           </button>
